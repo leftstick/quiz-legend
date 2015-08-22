@@ -13,10 +13,374 @@
     <link rel="icon" type="image/png" href="img/favicon.ico">
     <link rel="stylesheet" href="libs/prism.css">
     <link rel="stylesheet" type="text/css" href="libs/materialize/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="libs/fonticon/css/github.css">
+    <link rel="stylesheet" type="text/css" href="libs/fontello/css/icons.css">
     <link rel="stylesheet" type="text/css" href="legend.css">
 </head>
 <body>
+
+    <div class="container main">
+        <header>
+            <h1 class="title">Quiz Legend</h1>
+            <small>
+                by <a id="expand" href="#"><i class="icon-ellipsis"></i></a>
+                <div class="authors">
+                    <a href="https://github.com/davidyang013">@David.Yang</a>,
+                    <a href="https://github.com/geraldchen890806">@Guangliang.Chen</a>,
+                    <a href="https://github.com/leftstick">@Howard.Zuo</a>,
+                    <a href="https://github.com/sdd330">@Leijun.Yang</a>,
+                    <a href="https://github.com/jacksky007">@Xiaojie.Liu</a>
+                </div>
+            </small>
+            <small class="contribute"><a id="contribute" class="waves-effect blue darken-3 btn modal-trigger" href="#contribModal">Want contribute to this document?</a></small>
+        </header>
+
+        <div class="card indigo lighten-5 hoverable">
+            <div class="card-content">
+              <span class="card-title">Background</span>
+              <p>
+                  Recently, many front-end developers were shocked by kangax's <a href="http://perfectionkills.com/javascript-quiz/?from=timeline&isappinstalled=0" target="_blank">Javascript quiz</a>. Since JavaScript is a <a href="https://en.wikipedia.org/wiki/Dynamic_programming_language">dynamic programming language</a> and the standards are not well implemented in all runtime environment. You probably have no idea about "What happened to those quiz?", "What the hell is the execution result?"
+              </p>
+              <p>
+                  Let's try to figure out the magic behind.
+              </p>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 1</span>
+<pre><code class="language-javascript">(function(){
+    return typeof arguments;
+})();</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q1" class="with-gap" type="radio" id="q1-1" correct=""/><label for="q1-1">"object"</label>
+                <input name="q1" class="with-gap" type="radio" id="q1-2"/><label for="q1-2">"array"</label>
+                <input name="q1" class="with-gap" type="radio" id="q1-3"/><label for="q1-3">"arguments"</label>
+                <input name="q1" class="with-gap" type="radio" id="q1-4"/><label for="q1-4">"undefined"</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 2</span>
+<pre><code class="language-javascript">var f = function g(){ return 23; };
+typeof g();</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q2" class="with-gap" type="radio" id="q2-1"/><label for="q2-1">"number"</label>
+                <input name="q2" class="with-gap" type="radio" id="q2-2"/><label for="q2-2">"undefined"</label>
+                <input name="q2" class="with-gap" type="radio" id="q2-3"/><label for="q2-3">"function"</label>
+                <input name="q2" class="with-gap" type="radio" id="q2-4" correct/><label for="q2-4">Error</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 3</span>
+<pre><code class="language-javascript">(function(x){
+    delete x;
+    return x;
+})(1);</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q3" class="with-gap" type="radio" id="q3-1" correct/><label for="q3-1">1</label>
+                <input name="q3" class="with-gap" type="radio" id="q3-2"/><label for="q3-2">null</label>
+                <input name="q3" class="with-gap" type="radio" id="q3-3"/><label for="q3-3">undefined</label>
+                <input name="q3" class="with-gap" type="radio" id="q3-4"/><label for="q3-4">Error</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 4</span>
+<pre><code class="language-javascript">var y = 1, x = y = typeof x;
+x;</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q4" class="with-gap" type="radio" id="q4-1"/><label for="q4-1">1</label>
+                <input name="q4" class="with-gap" type="radio" id="q4-2"/><label for="q4-2">"number"</label>
+                <input name="q4" class="with-gap" type="radio" id="q4-3"/><label for="q4-3">undefined</label>
+                <input name="q4" class="with-gap" type="radio" id="q4-4" correct/><label for="q4-4">"undefined"</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 5</span>
+<pre><code class="language-javascript">(function f(f){
+    return typeof f();
+})(function(){ return 1; });</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q5" class="with-gap" type="radio" id="q5-1" correct/><label for="q5-1">"number"</label>
+                <input name="q5" class="with-gap" type="radio" id="q5-2"/><label for="q5-2">"undefined"</label>
+                <input name="q5" class="with-gap" type="radio" id="q5-3"/><label for="q5-3">"function"</label>
+                <input name="q5" class="with-gap" type="radio" id="q5-4"/><label for="q5-4">Error</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 6</span>
+<pre><code class="language-javascript">var foo = {
+    bar: function() { return this.baz; },
+    baz: 1
+};
+
+(function(){
+    return typeof arguments[0]();
+})(foo.bar);</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q6" class="with-gap" type="radio" id="q6-1" correct/><label for="q6-1">"undefined"</label>
+                <input name="q6" class="with-gap" type="radio" id="q6-2"/><label for="q6-2">"object"</label>
+                <input name="q6" class="with-gap" type="radio" id="q6-3"/><label for="q6-3">"number"</label>
+                <input name="q6" class="with-gap" type="radio" id="q6-4"/><label for="q6-4">"function"</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 7</span>
+<pre><code class="language-javascript">var foo = {
+    bar: function(){ return this.baz; },
+    baz: 1
+}
+typeof (f = foo.bar)();</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q7" class="with-gap" type="radio" id="q7-1" correct/><label for="q7-1">"undefined"</label>
+                <input name="q7" class="with-gap" type="radio" id="q7-2"/><label for="q7-2">"object"</label>
+                <input name="q7" class="with-gap" type="radio" id="q7-3"/><label for="q7-3">"number"</label>
+                <input name="q7" class="with-gap" type="radio" id="q7-4"/><label for="q7-4">"function"</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 8</span>
+<pre><code class="language-javascript">var f = (function f(){ return '1'; }, function g(){ return 2; })();
+typeof f;</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q8" class="with-gap" type="radio" id="q8-1"/><label for="q8-1">"string"</label>
+                <input name="q8" class="with-gap" type="radio" id="q8-2" correct/><label for="q8-2">"number"</label>
+                <input name="q8" class="with-gap" type="radio" id="q8-3"/><label for="q8-3">"function"</label>
+                <input name="q8" class="with-gap" type="radio" id="q8-4"/><label for="q8-4">"undefined"</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 9</span>
+<pre><code class="language-javascript">var x = 1;
+if (function f(){}) {
+    x += typeof f;
+}
+x;</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q9" class="with-gap" type="radio" id="q9-1"/><label for="q9-1">1</label>
+                <input name="q9" class="with-gap" type="radio" id="q9-2"/><label for="q9-2">"1function"</label>
+                <input name="q9" class="with-gap" type="radio" id="q9-3" correct/><label for="q9-3">"1undefined"</label>
+                <input name="q9" class="with-gap" type="radio" id="q9-4"/><label for="q9-4">NaN</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 10</span>
+<pre><code class="language-javascript">var x = [typeof x, typeof y][1];
+typeof typeof x;</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q10" class="with-gap" type="radio" id="q10-1"/><label for="q10-1">"number"</label>
+                <input name="q10" class="with-gap" type="radio" id="q10-2" correct/><label for="q10-2">"string"</label>
+                <input name="q10" class="with-gap" type="radio" id="q10-3"/><label for="q10-3">"undefined"</label>
+                <input name="q10" class="with-gap" type="radio" id="q10-4"/><label for="q10-4">"object"</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 11</span>
+<pre><code class="language-javascript">(function(foo){
+    return typeof foo.bar;
+})({ foo: { bar: 1 } });</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q11" class="with-gap" type="radio" id="q11-1" correct/><label for="q11-1">"undefined"</label>
+                <input name="q11" class="with-gap" type="radio" id="q11-2"/><label for="q11-2">"object"</label>
+                <input name="q11" class="with-gap" type="radio" id="q11-3"/><label for="q11-3">"number"</label>
+                <input name="q11" class="with-gap" type="radio" id="q11-4"/><label for="q11-4">Error</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 12</span>
+<pre><code class="language-javascript">(function f(){
+    function f(){ return 1; }
+    return f();
+    function f(){ return 2; }
+})();</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q12" class="with-gap" type="radio" id="q12-1"/><label for="q12-1">1</label>
+                <input name="q12" class="with-gap" type="radio" id="q12-2" correct/><label for="q12-2">2</label>
+                <input name="q12" class="with-gap" type="radio" id="q12-3"/><label for="q12-3">Error (e.g. "Too much recursion")</label>
+                <input name="q12" class="with-gap" type="radio" id="q12-4"/><label for="q12-4">undefined</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 13</span>
+<pre><code class="language-javascript">function f(){ return f; }
+new f() instanceof f;</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q13" class="with-gap" type="radio" id="q13-1"/><label for="q13-1">true</label>
+                <input name="q13" class="with-gap" type="radio" id="q13-2" correct/><label for="q13-2">false</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Question 14</span>
+<pre><code class="language-javascript">with (function(x, undefined){}) length;</code></pre>
+            </div>
+            <div class="card-action">
+                <input name="q14" class="with-gap" type="radio" id="q14-1"/><label for="q14-1">1</label>
+                <input name="q14" class="with-gap" type="radio" id="q14-2" correct/><label for="q14-2">2</label>
+                <input name="q14" class="with-gap" type="radio" id="q14-3"/><label for="q14-3">undefined</label>
+                <input name="q14" class="with-gap" type="radio" id="q14-4"/><label for="q14-4">Error</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="icon-success green-text accent-4"></i>
+                <i class="icon-close red-text accent-4"></i>
+                <a class="waves-effect waves-light btn right show-answer blue darken-3">View Explanation</a>
+                <blockquote class="answer teal lighten-5">
+                  The answer need to be placed by other people
+                </blockquote>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="contribModal" class="modal">
+        <div class="modal-content">
+          <h4>Clone Project</h4>
+          <div>
+              <pre><code class="language-bash">git clone https://github.com/leftstick/quiz-legend.git</code></pre>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+    </div>
+
+    <footer class="page-footer grey lighten-2">
+        <div class="footer-copyright black-text">
+            <div class="container">
+                &copy; 2015 Licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. by <a href="http://leftstick.github.io/" target="_blank">Howard.Zuo</a>.
+                <div class="right">
+                    <i class="icon-github-circled"></i><a href="https://github.com/leftstick/quiz-legend">Github</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="libs/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="libs/materialize/js/materialize.min.js"></script>
