@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src: url('../font/icons.eot?97426098');
-  src: url('../font/icons.eot?97426098#iefix') format('embedded-opentype'),
-       url('../font/icons.woff?97426098') format('woff'),
-       url('../font/icons.ttf?97426098') format('truetype'),
-       url('../font/icons.svg?97426098#icons') format('svg');
+  src: url('../font/icons.eot?92027360');
+  src: url('../font/icons.eot?92027360#iefix') format('embedded-opentype'),
+       url('../font/icons.woff?92027360') format('woff'),
+       url('../font/icons.ttf?92027360') format('truetype'),
+       url('../font/icons.svg?92027360#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'icons';
-    src: url('../font/icons.svg?97426098#icons') format('svg');
+    src: url('../font/icons.svg?92027360#icons') format('svg');
   }
 }
 */
@@ -59,3 +59,4 @@
 .icon-success:before { content: '\e802'; } /* '' */
 .icon-close:before { content: '\e803'; } /* '' */
 .icon-github-circled:before { content: '\e804'; } /* '' */
+.icon-star:before { content: '\e805'; } /* '' */
