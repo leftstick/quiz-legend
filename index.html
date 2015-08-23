@@ -293,7 +293,7 @@ x = y = typeof x; //step 2</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          The answer need to be placed by other people
+                          You may get it wrong here with the result of <code>"number"</code>, But the thing is <code>arguments[0]</code> is just a simple function passed in, not object['property'], which means <code>this</code> in <code>bar</code> points to global <code>window</code> object, and there is no <code>baz</code> property on it.
                         </blockquote>
                     </div>
                 </div>
