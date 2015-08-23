@@ -62,10 +62,9 @@ pre code[class*="language-"]{
 
 .answer{
     visibility: hidden;
-    border-color: #757575;
     height: 0;
-    margin: 10px 0;
-    padding: 0;
+    margin: 0;
+    padding: 0 0 0 0;
     font-size: 0;
     transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -73,10 +72,14 @@ pre code[class*="language-"]{
     -o-transition: all 0.3s;
 }
 
+.answer blockquote{
+    border-color: #757575;
+    padding-top: 5px;
+}
+
 .answer.show{
     visibility: visible;
     height: auto;
-    padding: 20px 0 20px 23px;
     font-size: 15px;
 }
 
