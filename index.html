@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-1" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 1</span>
 <pre><code class="language-javascript">(function(){
@@ -127,7 +127,7 @@
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-2" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 2</span>
 <pre><code class="language-javascript">var f = function g(){ return 23; };
@@ -158,7 +158,7 @@ typeof g();</code></pre>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-3" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 3</span>
 <pre><code class="language-javascript">(function(x){
@@ -194,7 +194,7 @@ delete object['property']</code></pre><br/>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-4" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 4</span>
 <pre><code class="language-javascript">var y = 1, x = y = typeof x;
@@ -231,7 +231,7 @@ x = y = typeof x; //step 2</code></pre>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-5" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 5</span>
 <pre><code class="language-javascript">(function f(f){
@@ -265,7 +265,7 @@ x = y = typeof x; //step 2</code></pre>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-6" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 6</span>
 <pre><code class="language-javascript">var foo = {
@@ -300,7 +300,7 @@ x = y = typeof x; //step 2</code></pre>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-7" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 7</span>
 <pre><code class="language-javascript">var foo = {
@@ -325,14 +325,14 @@ typeof (f = foo.bar)();</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          The answer need to be placed by other people
+                          This is very similar with previous quiz. The expression <code>(f = foo.bar)</code> returns just a simple function, and <code>this</code> in it will not point to the object <code>foo</code>, but global <code>window</code> instead.
                         </blockquote>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-8" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 8</span>
 <pre><code class="language-javascript">var f = (function f(){ return '1'; }, function g(){ return 2; })();
@@ -354,14 +354,15 @@ typeof f;</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          The answer need to be placed by other people
+                          The <code>comma operator</code> evaluates each of its operands (from left to right) and returns the value of the last operand.<br/><br/>
+                          So function <code>g</code> returned from <code>(function f(){ return '1'; }, function g(){ return 2; })</code>, while it gets called, number <code>2</code> is returned.
                         </blockquote>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-9" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 9</span>
 <pre><code class="language-javascript">var x = 1;
@@ -386,14 +387,14 @@ x;</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          The answer need to be placed by other people
+                          The key point is the same as <a href="#question-2">Question 2</a>. Function name <code>f</code> can not be reached from outside of the function body.
                         </blockquote>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-10" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 10</span>
 <pre><code class="language-javascript">var x = [typeof x, typeof y][1];
@@ -415,14 +416,19 @@ typeof typeof x;</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          The answer need to be placed by other people
+                            <ol>
+                                <li><code>typeof y</code> returns <code>"undefined"</code> since no variable <code>y</code> is defined before.</li>
+                                <li><code>x</code> is assigned to <code>typeof y</code>(which is <code>"undefined"</code>)</li>
+                                <li><code>typeof x</code> is <code>"string"</code></li>
+                                <li><code>typeof typeof x</code> is <code>"string"</code></li>
+                            </ol>
                         </blockquote>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-11" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 11</span>
 <pre><code class="language-javascript">(function(foo){
@@ -445,14 +451,18 @@ typeof typeof x;</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          The answer need to be placed by other people
+                          This is just a visual trick
+                          <pre><code class="language-javascript">(function(foo){
+    //the foo here is the passed in object itself, not the foo property defined in that object
+    return typeof foo.bar;
+})({ foo: { bar: 1 } });</code></pre>
                         </blockquote>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-12" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 12</span>
 <pre><code class="language-javascript">(function f(){
@@ -477,14 +487,19 @@ typeof typeof x;</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          The answer need to be placed by other people
+                          A function defined by a function declaration can be used before the function declaration itself. This behavior we call it "hoisting", so the code after compilation looks as following:
+                          <pre><code class="language-javascript">(function f(){
+    function f(){ return 1; }
+    function f(){ return 2; }
+    return f();
+})();</code></pre>
                         </blockquote>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-13" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 13</span>
 <pre><code class="language-javascript">function f(){ return f; }
@@ -504,14 +519,20 @@ new f() instanceof f;</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          The answer need to be placed by other people
+                          When the code <code>new f()</code> is executed, the following things happen:
+                          <ol>
+                              <li>A new object is created, inheriting from <code>f.prototype</code></li>
+                              <li>The constructor function <code>f</code> is called with the specified <code>arguments</code> and <code>this</code> bound to the newly created object. <code>new f</code> is equivalent to <code>new f()</code>, i.e. if no argument list is specified, <code>f</code> is called without <code>arguments</code>.</li>
+                              <li>The object returned by the constructor function becomes the result of the whole new expression. If the constructor function doesn't explicitly return an object, the object created in step 1 is used instead.</li>
+                          </ol>
+                          Since function is also some sort of <code>object</code>, so <code>new f()</code> returns <code>f</code> itself, not the created instance
                         </blockquote>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="card grey lighten-5">
+        <div id="question-14" class="card grey lighten-5">
             <div class="card-content">
                 <span class="card-title">Question 14</span>
 <pre><code class="language-javascript">with (function(x, undefined){}) length;</code></pre>
@@ -532,7 +553,8 @@ new f() instanceof f;</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          The answer need to be placed by other people
+                          The <code>with</code> statement adds the given object to the head of this scope chain during the evaluation of its statement body. If an unqualified name used in the body matches a property in the scope chain, then the name is bound to the property and the object containing the property. Otherwise a ReferenceError is thrown.<br/><br/>
+                          So <code>length</code> will be detected in the expression of <code>with</code> first, while the function object contains <code>length</code> property, which indicates the number of formal parameters.
                         </blockquote>
                     </div>
                 </div>
