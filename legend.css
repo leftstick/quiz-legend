@@ -71,6 +71,19 @@ h4{
     font-size: 15px;
 }
 
+.view-explanation{
+    text-align: right;
+}
+
+@media only screen and (max-width : 600px) {
+    .show-answer{
+        margin-top: 5px;
+    }
+    .view-explanation{
+        text-align: left;
+    }
+}
+
 footer.page-footer{
     margin-top: 0;
     padding-top: 0;

@@ -10,7 +10,7 @@
     });
 
     $('.show-answer').on('click', function() {
-        $(this).toggleClass('teal').toggleClass('blue').siblings('.answer').toggleClass('show');
+        $(this).toggleClass('teal').toggleClass('blue').parent().parent().find('.answer').toggleClass('show');
         return false;
     });
 
