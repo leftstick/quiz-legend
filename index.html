@@ -182,7 +182,12 @@ typeof g();</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          The answer need to be placed by other people
+                          The <code>delete</code> operator removes a property from an object.<br/><br/>
+                          The correct usage as following:
+                          <pre><code class="language-javascript">delete object.property
+delete object['property']</code></pre><br/>
+<code>delete</code> is only effective on an object's properties. It has no effect on variable or function names. Which means nothing will happen while deleting <code>x</code> variable.<br/><br/>
+                          &gt; And you may need to know, the <code>delete</code> operator has nothing to do with directly freeing memory (it only does indirectly via breaking references)
                         </blockquote>
                     </div>
                 </div>
