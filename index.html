@@ -525,8 +525,8 @@ new f() instanceof f;</code></pre>
                               <li>The constructor function <code>f</code> is called with the specified <code>arguments</code> and <code>this</code> bound to the newly created object. <code>new f</code> is equivalent to <code>new f()</code>, i.e. if no argument list is specified, <code>f</code> is called without <code>arguments</code>.</li>
                               <li>The object returned by the constructor function becomes the result of the whole new expression. If the constructor function doesn't explicitly return an object, the object created in step 1 is used instead.</li>
                           </ol>
-                          Since function is also some sort of <code>object</code>, so <code>new f()</code> returns <code>f</code> itself, not the created instance
-                          The expression of <code>a instanceof b</code> will check if b is in a's prototype chain, no matter at what level it is.
+                          Since function is also some sort of <code>object</code>, so <code>new f()</code> returns <code>f</code> itself, not the created instance.
+                          <p>The expression <code>a instanceof b</code> will check if b is in a's prototype chain, no matter at what level it is.</p>
                         </blockquote>
                     </div>
                 </div>
