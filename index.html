@@ -293,7 +293,7 @@ var x = y = typeof x; //step 2</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          You may get it wrong here with the result of <code>"number"</code>, But the thing is <code>arguments[0]</code> is just a simple function passed in, not object['property'], which means <code>this</code> in <code>bar</code> points to global <code>window</code> object, and there is no <code>baz</code> property on it.
+                          You may get it wrong here with the result of <code>"number"</code>. Params passed into a function can be treated as assignment. So <code>arguments[0]</code> gets the value of the function passed in, not its reference, which means <code>this</code> in <code>bar</code> points to <code>global</code>(<code>window</code> in browser envs) object, and there is no <code>baz</code> property on it.
                         </blockquote>
                     </div>
                 </div>
