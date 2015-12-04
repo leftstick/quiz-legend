@@ -325,7 +325,7 @@ typeof (f = foo.bar)();</code></pre>
                     </div>
                     <div class="col s12 answer">
                         <blockquote class="teal lighten-5">
-                          This is very similar with previous quiz. The expression <code>(f = foo.bar)</code> returns just a simple function, and <code>this</code> in it will not point to the object <code>foo</code>, but global <code>window</code> instead.
+                          This is very similar with previous quiz. The expression <code>(f = foo.bar)</code> returns the value of <code>foo.bar</code>, not its reference, so <code>this</code> in it will not point to the object <code>foo</code>, but global <code>window</code> instead.
                         </blockquote>
                     </div>
                 </div>
