@@ -218,10 +218,10 @@ x;</code></pre>
                         <blockquote class="teal lighten-5">
                           Thinking of this quiz in two separate steps:
                           <pre><code class="language-javascript">var y = 1; //step 1
-x = y = typeof x; //step 2</code></pre>
+var x = y = typeof x; //step 2</code></pre>
                           The <code>step 1</code> is precise. Let's see how <code>step 2</code> works:
                           <ol>
-                              <li>The expression is evaluated from <code>right</code> to <code>left</code></li>
+                              <li>The assignment expression is evaluated from <code>right</code> to <code>left</code></li>
                               <li><code>y</code> is reassigned to <code>(typeof x)</code> which is <code>"undefined"</code></li>
                               <li><code>x</code> is assigned to the result from last expression <code>(y = typeof x)</code> which is <code>"undefined"</code></li>
                           </ol>
